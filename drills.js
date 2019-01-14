@@ -7,7 +7,13 @@ function getYearOfBirth(age) {
 
 function createGreeting(name, age) {
     const yearOfBirth = getYearOfBirth(age);
-    return `Hi, my name is William and I'm 5 years old`;
+    if (typeof age !== Number) {
+        throw new TypeError(NaN);
+    } else if (type name !== string) {
+        throw new TypeError('Not a valid name')
+    } else {
+    return `Hi, my name is ${name} and I'm ${age} years old`;
+    }
 }
 
 try {
@@ -15,3 +21,4 @@ try {
 } catch(error) {
     throw new Error('Age not valid');
 }
+
